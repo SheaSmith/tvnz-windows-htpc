@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" IgnorableNamespaces="uap mp build">
+  <Identity Name="TelevisionNewZealandLimit.TVNZOnDemand" Version="4.31.2.70" Publisher="CN=Shea" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="6cba7e8a-3421-420e-80f4-486ffced19b0" PhonePublisherId="bce3945b-0dfb-4794-a972-ba2185e2a915" />
+  <Properties>
+    <DisplayName>TVNZ OnDemand</DisplayName>
+    <PublisherDisplayName>Television New Zealand Limited</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="EN-US" />
+    <Resource uap:Scale="200" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="https://xbox.tvnz.io/">
+      <uap:VisualElements DisplayName="TVNZ OnDemand" Description="TVNZ OnDemand" BackgroundColor="#000000" Square150x150Logo="images\TVNZOnDemandMedTile.png" Square44x44Logo="images\TVNZOnDemandAppList.png">
+        <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="images\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="images\TVNZOnDemandWideTile.png" Square310x310Logo="images\TVNZOnDemandLargeTile.png" Square71x71Logo="images\Small71x71Logo.png" ShortName="TVNZ OnDemand">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\splashscreen.png" BackgroundColor="#1D1D1D" />
+      </uap:VisualElements>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="http://*.prod.boltdns.net" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://*.prod.boltdns.net" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://xbox.tvnz.io/" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="6a7e5907-885c-4bcb-b40a-073c067bd3d5" />
+  </Capabilities>
+  <build:Metadata>
+    <build:Item Name="VisualStudio" Version="15.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2017" />
+    <build:Item Name="OperatingSystem" Version="10.0.18362.1 (WinBuild.160101.0800)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.28307.104" />
+    <build:Item Name="ProjectGUID" Value="60e6c861-81a8-4f4e-a83c-b2f86172b7ae" />
+    <build:Item Name="ilc.exe" Version="1.4.24211.00 built by: PROJECTNGDR2" />
+    <build:Item Name="OptimizingToolset" Value="ilc.exe" />
+    <build:Item Name="UseDotNetNativeSharedAssemblyFrameworkPackage" Value="True" />
+    <build:Item Name="UniversalGenericsOptOut" Value="false" />
+    <build:Item Name="MakePri.exe" Version="10.0.17763.132 (WinBuild.160101.0800)" />
+  </build:Metadata>
+</Package>
